@@ -1,0 +1,12 @@
+{
+  "name"         : "Chat-Application",
+  "version"      : "0.0.0",
+  "description"  : "Project for Rosso",
+  "main"         : "server.js",
+  "author"       : "Michael Withington Kyle Cabral Joe Ellis",
+  "dependencies" : {
+    "body-parser"    : "^1.4.3",
+    "express"        : "^4.13.4",
+    "method-override": "^2.1.3"
+  }
+}
