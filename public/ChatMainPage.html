@@ -7,11 +7,11 @@
     <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-		<!-- jQuery library -->
+	<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-		<!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Angular CDN-->
 
@@ -19,7 +19,7 @@
 
     <style>
       html{height:100%;}
-		  body {
+      body {
   			background:#0D343A;
   			background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
   			background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);
@@ -30,13 +30,11 @@
         margin: 0;
         padding: 0;
       }
-
       .chat li {
         margin-bottom: 10px;
         padding-bottom: 5px;
         border-bottom: 1px dotted #B3A9A9;
       }
-
       .chat li.left .chat-body {
         margin-left: 60px;
       }
@@ -44,32 +42,57 @@
       .chat li.right .chat-body {
         margin-right: 60px;
       }
-
-
       .chat li .chat-body p {
         margin: 0;
         color: #777777;
       }
-
       .panel .slidedown .glyphicon, .chat .glyphicon {
         margin-right: 5px;
       }
-
       .panel-body {
         overflow-y: scroll;
         height: 600px;
       }
 
+			.card 
+			{
+  				height: 400px;
+  				overflow: hidden;
+  				position: relative;
+			}
+
+			.card_content 
+			{
+				background-color: rgba(255,255,255,0.5);
+				padding: 10px;
+				position: absolute;
+				bottom: -400px;
+				transition: all 0.5s ease;
+				width: 200px;
+				height: 400px;
+			}
+
+			.card_content h3 
+			{
+				font-size: 1.5em;
+				margin-bottom: 0.5em;
+			}
+
+			.card:hover .card_content 
+			{
+				background-color: rgba(255,255,255,0.9);
+				bottom: 0;
+			}
+			
+
       ::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         background-color: #F5F5F5;
       }
-
       ::-webkit-scrollbar {
         width: 12px;
         background-color: #F5F5F5;
       }
-
       ::-webkit-scrollbar-thumb {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
         background-color: #555;
@@ -125,7 +148,7 @@
         <br/>
       </div>
       <div class="row">
-        <div class="col-md-10 col-md-offset-2">
+        <div class="col-md-10">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <span class="glyphicon glyphicon-comment"></span>  WELCOME TO THE CHAT
@@ -246,6 +269,9 @@
                         </li>
                     </ul>
                 </div>
+                
+                
+
                 <div class="panel-footer">
                     <div class="input-group">
                         <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here...">
@@ -256,6 +282,13 @@
                 </div>
             </div>
         </div>
+				<div class="card">
+				<h3 style=color:white>Hover here to view active users</h3>
+					<div class="card_content">
+    					<h3>Users</h3>
+						<p>Content</p>
+					</div>
+				</div>
     </div>
   </div>
   </body>
